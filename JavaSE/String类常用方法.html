@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String类常用方法</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">String类常用方法</h1>
+        <div class="show-content">
+          <blockquote><p>JavaDoc：Java的API文档</p></blockquote><blockquote>
+<p>字符串和字符数组：</p>
+<p>构造函数 public String（Char[] value）将全部字符数组变成字符串</p>
+<p>
+
+构造函数 public String（Char[] value，int offset ,int count）将部分字符数组变成字符串
+
+</p>
+<p>普通方法 
+
+public  char charAt( int offset)   获取指定索引位置的字符</p>
+<p>普通方法 
+
+public  char[] toCharArray()   将字符串转换为字符数组返回</p>
+</blockquote><blockquote>
+<p>字符串和字节转换：</p>
+<p>
+
+构造函数 public String（byte[] bytes）将全部字节数组变成字符串</p>
+<p>
+
+构造函数 public String（
+
+byte[] bytes
+
+，int offset ,int count）将部分字节数组变成字符串  
+
+</p>
+<p>普通方法 public byte[] getBytes()将字符串转换为字节数组</p>
+<p>
+
+普通方法 public byte[] getBytes(String charsetName) throws UnsupportedEncodiingException  编码转换</p>
+</blockquote><p><br></p><blockquote>
+<p>字符串比较：</p>
+<p><b>普通方法 public boolean equals（String object）大小写是区分的字符比较</b></p>
+<p>
+
+<b>
+
+普通方法  public boolean equalsIgnoreCase（String anotherString）大小写不区分的 字符表叫<br></b></p>
+<p><b>
+
+普通方法  
+
+public  int compareTo（
+
+String anotherString ）
+
+大小写是区分的
+
+进行字符串大小比较：int返回值可以&lt;0;   0&lt;;   0=;<br></b></p>
+<p><b>
+
+普通方法  
+
+public  int compareTo
+
+IgnoreCase
+
+（ String str）
+
+
+大小写不区分的 
+
+
+
+进行字符串大小比较
+
+</b>
+</p>
+</blockquote><blockquote>
+<p>字符串查找功能：</p>
+<p>普通方法 public boolean contains​(String s) 判断子字符串是否存在</p>
+<p>
+
+普通方法 
+
+public int indexOf​(String str) 从前向后查找指定字符串的位置</p>
+<p>
+
+普通方法 
+
+public int indexOf​(String str,
+                   int fromIndex)
+
+
+
+ 从指定位置 由前向后
+
+查找字符串的位置
+
+
+</p>
+<p>
+
+普通方法 
+
+public int lastIndexOf​(String str)
+
+ 
+
+ 从后往前查找字符串的位置
+
+
+</p>
+<p>
+
+
+
+普通方法  public int lastIndexOf​(String str,
+                       int fromIndex)
+
+
+从
+
+指定  位置后往前查找字符串的位置 
+
+
+</p>
+<p>
+
+
+
+普通方法  public boolean startsWith​(String prefix) 判断是否以指定字符串开头</p>
+<p>
+
+
+
+普通方法  public boolean startsWith​(String prefix,
+                          int toffset)
+
+
+判断是否以指定位置指定字符串开头
+
+
+</p>
+<p>
+
+
+
+普通方法
+
+public boolean endsWith​(String suffix)
+
+
+判断是否以指定字符串开结尾</p>
+</blockquote><blockquote>
+<p>字符串替换：</p>
+<p> 
+
+普通方法
+
+public String replaceAll​(<b>String regex</b>,
+                         String replacement)  全部替换</p>
+<p>
+
+
+
+普通方法
+
+public String replaceFirst​(<b>String regex</b>,
+                           String replacement)  
+
+替换 首个</p>
+<p>牵扯到正则表达式</p>
+</blockquote><blockquote>
+<p>字符串拆分：字符串拆分成字符串数组的形式返回</p>
+<p>
+
+
+
+普通方法  public String[] split​(<b>String regex</b>) 按照指定的字符串全部拆分</p>
+<p>
+
+普通方法 
+
+
+public String[] split​(<b>String regex</b>,
+                      int limit)
+
+
+按照指定的字符串拆分指定的个数，后面不再拆分  
+
+</p>
+<p>部分拆分需要\\转义才能拆分</p>
+</blockquote><blockquote>
+<p>字符串的截取：</p>
+<p>
+
+
+
+普通方法   public String substring​(int beginIndex) 从指定索引开始截取</p>
+<p>
+
+
+
+普通方法   public String substring​(int beginIndex,
+                        int endIndex) 从指定范围做截取</p>
+<p>开发中常常使用indexOf()计算得来的</p>
+</blockquote><blockquote>
+<p>格式化字符串：类似C语言占位符输出%s,    %d,   %f,   %c</p>
+<p>
+
+
+
+普通方法  public static String format​(String format,
+                            Object... args) 根据指定的结构进行文本输出</p>
+</blockquote><blockquote>
+<p>字符串其他方法：</p>
+<p>
+
+
+
+普通方法  public String concat​(String str) 字符串连接按照处理，没有按照静态的处理</p>
+<p>
+
+普通方法
+
+ public String intern​() 对字符串对象入池保存</p>
+<p>
+
+
+
+普通方法  public boolean isEmpty​() 判断内容是否是空字符串</p>
+<p>
+
+普通方法  
+
+public int length​() 判断字符串长度</p>
+<p>
+
+普通方法  
+
+public String trim​() 去除左右的空格数间歇</p>
+<p>
+
+普通方法 
+
+
+
+public String toUpperCase​() 转大写，避免非字母
+
+转换
+
+</p>
+<p>普通方法
+
+
+
+public String toLowerCase​() 转小写
+
+，避免非字母
+
+
+转换
+
+
+</p>
+</blockquote>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

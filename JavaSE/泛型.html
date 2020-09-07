@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>泛型</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">泛型</h1>
+        <div class="show-content">
+          <blockquote><p>泛型：JDK1.5后主要解决ClassCatException问题；</p></blockquote><blockquote><p>泛型需求：存在多种数据类型，这个时候需要数据类型转型。</p></blockquote><blockquote>
+<p><b>泛型定义<br></b></p>
+<p>//此处T可以随便写为任意标识，常见的如T、E、K、V等形式的参数常用于表示泛型</p>
+<p>//在实例化泛型类时，必须指定T的具体类型</p>
+<p>public class Generic&lt;<b>T</b>&gt;{</p>
+<p>    //key这个成员变量的类型为T,T的类型由外部指定 </p>
+<p>    private <b>T</b> key;</p>
+<p>    public Generic(<b>T</b> key) { //泛型构造方法形参key的类型也为T，T的类型由外部指定</p>
+<p>        this.key = key;</p>
+<p>    }</p>
+<p>    public <i>T</i> getKey(){ //泛型方法getKey的返回值类型为T，T的类型由外部指定</p>
+<p>        return key;</p>
+<p>    }</p>
+<p>}</p>
+<p>|-泛型之中允许设置引用类型，如果仙子啊要操作基本数据类型必须要使用包装类</p>
+<p>|-JDK1.7  Point&lt;Integer&gt; point =new Point&lt;&gt;()后面是可以省略。</p>
+</blockquote><p><br></p><blockquote>
+<p>泛型通配符：泛型的方法中用于接收任意参数，用到通配符 <b>？</b></p>
+<p>public static void fun（ <b>Generic &lt;?&gt; </b>temp）{</p>
+<p>System.out.print( temp.getKey()  );</p>
+<p>}</p>
+<p>两个小的通配符 </p>
+<p>|-“？ extends 类”：表示该泛型类型只允许设置该类或者该类子类的泛型；</p>
+<p>|-“？super 类”：表示该泛型类型只允许设置该类或该类父类的泛型；</p>
+</blockquote><blockquote>
+<p>泛型接口：</p>
+<p>interface Inter&lt;T&gt;{</p>
+<p>	
+	    public void show(T t);</p>
+<p>
+
+}</p>
+<p>
+
+class InterImpl2&lt;Q&gt; implements Inter&lt;Q&gt;{</p>
+<p>	
+	    public void show(Q q){</p>
+<p>
+		
+		            System.out.println("show :"+q);
+	}</p>
+<p>}//实例化才完成泛型类型指定</p>
+<p>
+
+
+
+class InterImpl implements Inter&lt;String&gt;{</p>
+<p>
+	
+
+	    public void show(String str){</p>
+<p>		
+		            System.out.println("show :"+str);}</p>
+<p>
+}</p>
+</blockquote>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

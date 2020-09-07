@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>继承性</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">继承性</h1>
+        <div class="show-content">
+          <blockquote><p>继承主要是为了扩充已有类的功能</p></blockquote><blockquote>
+<p>继承的实现：</p>
+<p><b>class 子类 extends 父类{  } 特别需要注意的是很多情况下我们把子类称派生类，把父类称为超类；子类包含父类的方法和属性；</b></p>
+</blockquote><blockquote><p><b>子类实例化，首先实例化好父类；子类实例化先实例化的是父类，后实例化子类；子类实例化会自动实例化一个父类；super（）子类调用父类构造语句，该语句只可以在子类首行；若父类没有无参构造，必须显式的用super()调用有参构造函数</b></p></blockquote><blockquote>
+<p>继承限制：</p>
+<p><b>Java中不允许多重继承，只可以多层继承</b></p>
+<p>继承关系中可以继承所有的东西，对于私有的都是隐式继承；对于公共的是显示继承；</p>
+</blockquote>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

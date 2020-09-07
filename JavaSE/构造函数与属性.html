@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>构造函数与属性</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">构造函数与属性</h1>
+        <div class="show-content">
+          <blockquote><p><b>Java中类中属性一定要封装，private属性，通过getxx与setxx方法设置属性，不可以直接访问类中属性。</b></p></blockquote><blockquote><p><b>构造方法的作用</b>：实例化对象属性初始化处理只有在使用关键字new才使用</p></blockquote><blockquote>
+<p><b>构造方法定义要求：</b></p>
+<p>1.构造方法名称与类名一致</p>
+<p>2.构造方法的不允许设置返回值类型</p>
+<p>3.构造方法是在使用关键字new实例化对象时自动调用</p>
+<p>4.一个类至少存在一个构造方法永恒存在</p>
+</blockquote><p>构造方法在任何类中都存在，默认是无参构造方法，一旦自己创建自己的构造方法那么默认的无参构造方法是不会被创建的。如果仍然想要使用必须声明。</p><blockquote>
+<p><b>为什么构造方法不允许设置返回值类型？构造方法无返回值为什么不用void？</b></p>
+<p>程序编译器根据代码结构来进行编译处理的，执行的时候也是根据代码结构来处理的。不使用返回参数就是用来区分普通方法和构造方法。</p>
+<p>普通方法是在实例化后才调用的而构造方法使用时机是类的实例化产生对象时调用的。</p>
+<p>构造方法也是方法，方法也是可以重载的，一般来说构造方法可以使用参数重载。</p>
+</blockquote><blockquote><p><b>建议：</b>构造方法参数重载按照有序的参数变化由少到多的方式编码</p></blockquote><blockquote><p><b>对象如果没有被应用，new person（），及没用定义一个person对象名直接new一个person。那么一次使用后这个匿名对象将会被GC回收</b></p></blockquote><p></p><p></p><p></p><p></p><blockquote><p><b>只要是方法都可以传递任意数据类型（基本数据类型，引用数据类型）</b></p></blockquote>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

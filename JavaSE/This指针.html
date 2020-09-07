@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This指针</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">This指针</h1>
+        <div class="show-content">
+          <blockquote>
+<p><b>使用this可以实现三类结构描述：</b></p>
+<p>当前类的属性，this属性</p>
+<p>当前类中的方法（普通方法，构造方法）：this（），this。方法名称</p>
+<p>描述当前对象</p>
+</blockquote><blockquote>
+<p><b>使用this指针调用当前类中属性</b></p>
+<p>public person（String name ,int age）{</p>
+<p>                            name=name;</p>
+<p>                              age=age</p>
+<p>}</p>
+<p>这样导致类中的name ,age 不能与参数 name , age 所分辨。导致对象数据无变化<b>正确写法如下：</b></p>
+<p>
+
+public person（String name ,int age）{   </p>
+<p>                                     this.name=name;                          </p>
+<p>                                     this.age=age</p>
+<p>
+
+}    </p>
+</blockquote><blockquote>
+<p><b>this调用本类方法：</b></p>
+<p>普通方法调用问题不大，可以加上this，也可不加</p>
+<p>对于构造方法，利用this调用本类的构造方法；</p>
+<p><b>对本类的构造方法自我调用：</b></p>
+<p><b>this语句只可以被放在构造函数 的第一行，构造方法可以调用普通方法，普通方法不可以调用构造方法</b></p>
+<p><br></p>
+</blockquote>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

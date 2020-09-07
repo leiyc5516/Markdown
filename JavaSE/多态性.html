@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>多态性</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">多态性</h1>
+        <div class="show-content">
+          <blockquote><p>多态性：面向对象三大特性主要特征，多态性是在继承性上扩充出来的， 实现父子类的互相转换处理</p></blockquote><blockquote>
+<p>多态性的基本概念：</p>
+<p>方法的多态性：</p>
+<p>-方法的重载：在同一个方法名称可以根据传入的参数的类型或个数的不同实现多个功能</p>
+<p>-方法的覆写：根据实现的子类不同所使用的方法不同情况的不同实现</p>
+<p>对象的多态性：父子实例间的转换处理 ，两中不同处理方式</p>
+<p>-对象的向上转型：父类 父类实例=子类实例，自动完成实现；大多数是向上转型；</p>
+<p>-对象的向下转型： 子类 子类实例=（子类）父类实例，强制完成转换。子类可以对父类进行功能扩充的时候；向下转型。</p>
+</blockquote><blockquote><p>向上转型;:保证接受返回参数的统一设计；参数 父类 参数名字=new 子类，调用时可以调用的子类覆写父类的方法。</p></blockquote><blockquote><p>向下转型：需要使用到子类特殊的方法；父类向下转型。父类没有这个功能，要使用子类功能，
+
+子类 子类实例=（子类）父类实例；</p></blockquote><blockquote><p>instanceof:判断某个实例是否是某个类的对象 instanceof 关键字判断； 语法如下： 对象 instanceof 类；返回值为 boolean；true满足false不满足。<b>一般转型之前都是用instanceof判断</b></p></blockquote>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

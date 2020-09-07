@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>接口</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">接口</h1>
+        <div class="show-content">
+          <blockquote>
+<p>接口：一个纯粹的抽象类（原始的接口包含：抽象方法+全局常量），jdk1.8后：引入Lambda表达式 的概念， 除了抽象方法和全局常量外，还可以定义普通方法和静态方法</p>
+<p>interface：interface 抽象接口名{     }（接口名称通常加入I区分类）</p>
+<p>接口可以被使用的条件：</p>
+<p>子类 Implements 接口名{</p>
+<p>}</p>
+<p>|-一个子类可以实现多个接口</p>
+<p>|-子类如果不是抽象类必须覆写全部的抽象方法</p>
+<p>|-接口对象可以利用子类对象的向上转型进行实例化</p>
+</blockquote><blockquote><p>Java中利用接口实现多重继承的概念；</p></blockquote><blockquote>
+<p>接口的定义加强：允许定义普通方法必须加default</p>
+<p>一般情况非补救情况，在一般情况追加一个过渡抽象类完成；</p>
+<p> public <b>default</b> 返回类型 方法名（）{</p>
+<p>/*方法实体*、</p>
+<p>return 返回类型；</p>
+<p>}</p>
+<p>接口实现static方法和以往抽象类一样可以通过接口名调用；</p>
+</blockquote><blockquote>
+<p>工厂设计模式Factory：</p>
+<p>解决耦合问题；new产生耦合；</p>
+<p><a href="https://www.jianshu.com/p/38493eb4ffbd" target="_blank">工厂设计模式详解</a></p>
+<p><a href="https://www.jianshu.com/p/4d0ab8fa1054" target="_blank">工厂设计模式详解2</a></p>
+</blockquote><blockquote>
+<p>代理模式：</p>
+<p>主要功能帮助用户把开发注意力集中到核心业务功能的处理上</p>
+<p><a href="https://www.jianshu.com/p/e9aa4d5952fe" target="_blank">代理设计模式详解</a></p>
+</blockquote><blockquote>
+<p>抽象类和接口的区别</p>
+<p>
+一 接口和抽象类的相似性</p>
+<p>
+1 接口和抽象类都不能被实例化，它们都位于继承树的顶端，用于被其他类实现和继承。</p>
+<p>
+
+2 接口和抽象类都可以包含抽象方法，实现接口或继承抽象类的普通子类都必须实现这些抽象方法。 </p>
+<p>
+二 接口和抽象类的区别</p>
+<p>1 （不能为普通方法提供方法体）接口里只能包含抽象方法，静态方法和默认方法（加default），不能为普通方法提供方法实现，抽象类则完全可以包含普通方法，接口中的普通方法默认为抽象方法。</p>
+<p>
+
+2 .(public static final 赋值)抽象类中的成员变量可以是各种类型的，而接口中的成员变量只能是 public static final 类型的，并且必须赋值，否则通不过编译。</p>
+<p>
+
+3 （是否有构造器）接口不能包含构造器，抽象类可以包含构造器，抽象类里的构造器并不是用于创建对象，而是让其子类调用这些构造器来完成属于抽象类的初始化操作。</p>
+<p>
+4 .（不能包含初始化块）接口里不能包含初始化块，但抽象类里完全可以包含初始化块。</p>
+<p>
+
+5. （继承一个抽象类、多个接口）一个类只能继承一个抽象类，而一个类却可以实现多个接口。 </p>
+<p><br></p>
+</blockquote>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

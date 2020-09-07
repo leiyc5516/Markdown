@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>覆写</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">覆写</h1>
+        <div class="show-content">
+          <blockquote>
+<p>覆写：子类中继承父类但是父类方法，属性不适合该子类，可以对该方法或属性重新定义， 称之为覆写；</p>
+<p>方法的
+
+覆写：子类定义与父类方法名称相同，参数类型和个数完全相同的情况时候称为方法覆写； 一旦被覆写就必须调用覆写后的方法，没有被覆写才会调用父类方法；覆写就是为了优化父类方法。</p>
+<p>如果覆盖完成还想调用父类方法必须super（）.方法名；</p>
+</blockquote><blockquote><p>方法覆写限制：被覆写的方法访问权限不能拥有更严格的控制
+
+访问
+
+权限；</p></blockquote><blockquote>
+<p><b>请解释overLoading与override区别：</b></p>
+<p><b>重载：
+
+1.重载Overload是一个类中多态性的一种表现 </b></p>
+<p><b>2.重载要求同名方法的参数列表不同(参数类型，参数个数甚至是参数顺序)</b></p>
+<p><b>3.重载的时候，返回值类型可以相同也可以不相同。无法以返回型别作为重载函数的区分标准
+
+</b></p>
+<p><b>覆写：</b></p>
+<p><b>1.发生在父类与子类之间</b></p>
+<p><b>2.方法名，参数列表，返回类型（除过子类中方法的返回类型是父类中返回类型的子类）必须相同
+</b></p>
+<p><b>3.访问修饰符的限制一定要大于被重写方法的访问修饰符（public&gt;protected&gt;default&gt;private)
+</b></p>
+<p><b>4.重写方法一定不能抛出新的检查异常或者比被重写方法申明更加宽泛的检查型异常</b></p>
+</blockquote><blockquote><p>属性的覆盖：子类定义与父类的相同名称属性，是属性的覆盖；通过super.getxx()获取父类的属性；</p></blockquote><blockquote>
+<p><b>super与this的区别：</b></p>
+<p>
+
+super和this的异同：</p>
+<p>super:　它引用当前对象的直接父类中的成员（用来访问直接父类中被隐藏的父类中成员数据或函数，基类与派生类中有相同成员定义时如：super.变量名    super.成员函数据名（实参）</p>
+<p>this：它代表当前对象名（在程序中易产生二义性之处，应使用this来指明当前对象；如果函数的形参与类中的成员数据同名，这时需用this来指明成员变量名）super()和this()类似,</p>
+<p><b>区别是，super()在子类中调用父类的构造方法，this()在本类内调用本类的其它构造方法。</b></p>
+<p><b>super()和this()均需放在构造方法内第一行。</b></p>
+<p>尽管可以用this调用一个构造器，但却不能调用两个。</p>
+<p>this和super不能同时出现在一个构造函数里面，因为this必然会调用其它的构造函数，其它的构造函数必然也会有super语句的存在，所以在同一个构造函数里面有相同的语句，就失去了语句的意义，编译器也不会通过。</p>
+<p>this()和super()都指的是对象，所以，均不可以在static环境中使用。包括：static变量,static方法，static语句块。</p>
+<p>从本质上讲，this是一个指向本对象的指针, 然而super是一个Java关键字。 </p>
+</blockquote><blockquote>
+<p>final关键字：定义不能被继承的类，定义不能被覆写的方法，常量。public static final 数据类型 数据名=某个值；定义全局常量；</p>
+<p>final还可以定义局部常量，不得不说final是最有效的常量定义方法。</p>
+</blockquote>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

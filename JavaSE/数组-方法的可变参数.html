@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组|方法的可变参数</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">数组|方法的可变参数</h1>
+        <div class="show-content">
+          <blockquote><p>数组：一组相关变量的集合，Java中数组定义为引用数据类型</p></blockquote><blockquote>
+<p>数组的定义：</p>
+<p>数组的动态初始化：初始化后数组的每一个元素保存内容为其对应数组的默认值</p>
+<p>-声明并初始化数组：数据类型 数组名称【】=new 数据类型【长度】</p>
+<p>-
+
+声明并初始化数组：数据类型  
+
+【】
+
+数组名称=new 数据类型【长度】</p>
+<p>数组的静态初始化：在数组定义时就为其设置好了里面的内容</p>
+<p>-简化格式： 数据类型 数组名称【】={数据1，
+
+数据2 ，
+
+数据3 ...}</p>
+<p>-完整格式：
+
+数据类型 数组名称【】=new 数据类型【】
+
+{数据1， 数据2 ， 数据3 ...}</p>
+</blockquote><blockquote><p>for each输出：for（数据类型 变量 ： 数组 | 集合）{ }可以自动的取出数组的元素内容避免下表获取方式来获取出现越界的情况</p></blockquote><blockquote><p>数组排序：通过基础的模型执行的，可以利用排序等到升序或者降序的数组；</p></blockquote><blockquote>
+<p>数组反转：首尾交换，对于数组前后交换有两种：</p>
+<p>A.length/2作为交换次数  单数组swap（A【i】,A【n-i】）</p>
+<p>双数组头尾角标取值放入</p>
+</blockquote><blockquote>
+<p>数组类库：Java中数组处理函数：</p>
+<p>数组排序：Java.util.Arrays.sort(数组)</p>
+<p>int data【】= new  int【10】；
+
+Java.util.Arrays.sort（data)</p>
+<p>数组拷贝：System.arraycopy（原数组，原数组开始点，目标数组，目标数组开始点，拷贝长度）。</p>
+<p>
+
+int data1【】= new  int【】{1,2,3,4,5,6}；
+
+</p>
+<p>
+
+int data2【】= new  int【12,14,15,56,47,85,95】；
+
+</p>
+<p>
+
+System.arraycopy（data1，2，data2，3，2） ；</p>
+</blockquote><blockquote>
+<p>方法可变参数：例如 int sum（<b>参数类型 ... data</b>）{  }//变种数组</p>
+<p><b>data就相当于数组；</b></p>
+<p>
+
+int sum（int ... data）{  </p>
+<p>            for(int temp : data) </p>
+<p>                                        s+=temp;</p>
+<p>            return s</p>
+</blockquote><blockquote>
+<p>对象数组：数组元素是对象的数组；</p>
+<p>动态初始化： 类 对象数组名称【】 = new 类【长度】，每个元素都是对象；</p>
+<p>静态初始化； 类 对象数组名称【】= new 类【】{实例化对象，实例化对.........}</p>
+</blockquote>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

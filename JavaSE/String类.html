@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String类</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">String类</h1>
+        <div class="show-content">
+          <blockquote>
+<p><b>String类</b>是开发中必不可少的类；</p>
+<p><b>字符串</b>：严格意义上不是一个基本类型，JVM支持制造了一种简单可使用的String类，这样可直接赋值处理；</p>
+</blockquote><blockquote><p>String类字符串中的每一个字符的数据保存在数组里；JDK1.9String保存在字节数组中Byte【】,JDK 1.8放在字符数组中；</p></blockquote><blockquote>
+<p>String类实例化：</p>
+<p><b>直接赋值实例化模式</b>，可以做到实例化共享内存，类似引用String strA=“sdnm”  
+
+String strB=“sdnm”   
+
+String strC=“sdnm”  strA,strB ,strC共享一个堆内存，字符串池（数组集合）如果池中包含这个String类（字符数组）对象，直接引用不需要new一个新的实例化对象；</p>
+<p><b>构造方法实例化的模式</b>    <b>String str=new String（“司南”）</b>实例化模式，这种方式不会放到String池中，但是可以手工入池<b>
+
+String str=new String（“司南”）.intern();</b></p>
+</blockquote><blockquote>
+<p>String比较：== 判断；这样的判断不准确；要比较String可以使用equals（）方法的变形方法；Str1.equals（Str2）；</p>
+<p>==进行的数值比较，如果放到对象比较的话实际上比较的两个对象的地址值；</p>
+<p>equals（）：是类提供的比较方法，可以直接进行字符串类的对象内容比较</p>
+</blockquote><blockquote><p>字符串常量是任何使用“”定义的字符串常量实际都是一个String类的匿名对象；</p></blockquote><blockquote>
+<p><b>对象判断小技巧：</b>对项目开发的时候，如果数据是由用户输入的话并且要求这些数据为一个指定内容的话，建议将字符串常量写在前面</p>
+<p>“mldn”.equals(input)  equals （）判断可以回避NULL的判断，如果字符常量在前面那么调用equals（）就不会出现NullpointerException错误</p>
+</blockquote><blockquote>
+<p>String对象池主要是为了String类对象的数据共享；两种池：</p>
+<p>静态常量池：指的是程序加载时会自动将程序中保留的字符串，普通常量，
+
+类和方法的信息等等全部进行分配</p>
+<p>运行时常量池：
+
+指的是程序加载后，变量录入后提供的池叫做运行时常量池；</p>
+</blockquote><blockquote><p>字符串内容不可更改：String保存字符是用数组的，所以不可更改数组的长度，频繁的修改String类的数据会产生很多垃圾；String str+="x",每执行一次都会修改str引用并在堆中产生一个垃圾String对象；</p></blockquote><blockquote>
+<p>主方法组成：</p>
+<p>public：一种访问权限，必须是公共的的起点</p>
+<p>static：程序的执行是通过类名称完成的，所以表示此方法可以由类直接调用执行</p>
+<p>void：主方法无返回</p>
+<p>main:方法名关键字</p>
+<p>String 【】
+
+args：字符串数组，可以实现程序启动参数的接收可以通过这种参数实现初始化数据输入模拟</p>
+<p><br></p>
+</blockquote>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

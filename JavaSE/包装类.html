@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>包装类</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">包装类</h1>
+        <div class="show-content">
+          <blockquote>
+<p>Java中的基本数据类型没有方法和属性，而包装类就是为了让这些拥有方法和属性，实现对象化交互。   </p>
+<p>数值型包装类都继承至Number。</p>
+<p>字符型和布尔型继承至Object。 </p>
+</blockquote><p><br></p><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/14935748-181931d90b3aa588.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><div class="image-package">
+<img class="uploaded-img" src="http://upload-images.jianshu.io/upload_images/14935748-00e3749e79ee8e01.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" width="auto" height="auto"><br><div class="image-caption"></div>
+</div><blockquote>
+<p>基本数据和包装类之间的转换</p>
+<p>装箱：基本数据类型转换为包装类； </p>
+<p>拆箱：包装类转换为基本数据类型。</p>
+</blockquote><blockquote>
+<p>基本数据类型和包装类的转换</p>
+<p>通过包装类Integer.toString()将整型转换为字符串；</p>
+<p>通过Integer.parseInt()将字符串转换为int类型；</p>
+<p>通过valueOf()方法把字符串转换为包装类然后通过自动拆箱。</p>
+</blockquote><blockquote>
+<p><b>Number类是个抽象类：</b></p>
+<p><b>普通方法 
+
+public byte byteValue​() 从包装类中获取Byte数据</b></p>
+<p><b>
+
+普通方法 
+
+
+public short shortValue​()
+
+
+从包装类中获取short数据<br></b></p>
+<p><b>
+
+普通方法 
+
+
+public abstract double doubleValue​() 
+
+从包装类中获取
+
+double
+
+
+数据
+
+
+
+<br></b></p>
+<p><b>
+
+普通方法 
+
+
+public abstract float floatValue​()
+
+
+从包装类中获取
+
+float
+
+
+
+
+数据
+
+
+
+
+<br></b></p>
+<p><b>
+
+普通方法 
+
+
+public abstract long longValue​()
+
+
+从包装类中获取
+
+long
+
+
+
+
+数据
+
+
+
+
+<br></b></p>
+<p><b>
+
+普通方法 
+
+
+public abstract int intValue​()
+
+
+从包装类中获取
+
+int
+
+
+
+
+数据
+
+</b>
+
+
+</p>
+</blockquote><blockquote>
+<p>装箱和拆箱：</p>
+<p>数据装箱：将基本数据保存到包装类中，通常通过构造方法实现。</p>
+<p>|-Integer类： public  
+
+Integer （int valve）； </p>
+<p>|- Double类： public  
+
+Double
+
+ （ double
+
+valve）； </p>
+<p>|-
+
+Boolean类： public   
+
+Boolean
+
+ （  boolean
+
+ valve）；</p>
+<p>数据拆箱：从包装类中获取基本类型：</p>
+<p>|-数据类型包装类已经由Number类定义了拆箱的方法了；</p>
+<p>|-Boolean型：
+
+public boolean booleanValue​()；</p>
+</blockquote><blockquote>
+<p>自动装箱可以支持自动的数学运算</p>
+<p>Integer  obj=10；//自动装箱</p>
+<p>obj++；</p>
+<p>int  num=obj；//自动拆箱</p>
+<p>还可以实现Object接收基本数据类型的操作</p>
+<p>Object obj=19.2；//double自动装箱为Double,向上转型Object类</p>
+<p>double num=（Double） obj；//向下转型成包装类才能拆箱</p>
+<p>包装类的相等判断需要equals去判断；</p>
+<p><br></p>
+</blockquote>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

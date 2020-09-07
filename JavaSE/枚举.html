@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>枚举</title>
+    <style type="text/css" media="all">
+      body {
+        margin: 0;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", sans-serif;
+        font-size: 14px;
+        line-height: 20px;
+        color: #777;
+        background-color: white;
+      }
+      .container {
+        width: 700px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      .post {
+        font-family: Georgia, "Times New Roman", Times, "SimSun", serif;
+        position: relative;
+        padding: 70px;
+        bottom: 0;
+        overflow-y: auto;
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 25px;
+        color: #515151;
+      }
+
+      .post h1{
+        font-size: 50px;
+        font-weight: 500;
+        line-height: 60px;
+        margin-bottom: 40px;
+        color: inherit;
+      }
+
+      .post p {
+        margin: 0 0 35px 0;
+      }
+
+      .post img {
+        border: 1px solid #D9D9D9;
+      }
+
+      .post a {
+        color: #28A1C5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post">
+        <h1 class="title">枚举</h1>
+        <div class="show-content">
+          <blockquote>
+<p>枚举的基本定义：利用enum关键字 可以实现枚举定义；</p>
+<p>例如enum Color{</p>
+<p>RED, BULE, GREEN;</p>
+<p>}</p>
+<p>Color c=Color.RED；</p>
+</blockquote><p>一：Enum 类型的介绍</p><p>　　枚举类型（Enumerated Type） 很早就出现在编程语言中，它被用来将一组类似的值包含到一种类型当中。而这种枚举类型的名称则会被定义成独一无二的类型描述符，在这一点上和常量的定义相似。不过相比较常量类型，枚举类型可以为申明的变量提供更大的取值范围。</p><p>二：Enum 类型的特点</p><p>在某些情况下，一个类的对象时有限且固定的，如季节类，它只有春夏秋冬4个对象这种实例有限且固定的类，在 Java 中被称为枚举类；</p><p>在 Java 中使用 enum 关键字来定义枚举类，其地位与 class、interface 相同；</p><p>枚举类是一种特殊的类，它和普通的类一样，有自己的成员变量、成员方法、构造器 (只能使用 private 访问修饰符，所以无法从外部调用构造器，构造器只在构造枚举值时被调用)；</p><p>一个 Java 源文件中最多只能有一个 public 类型的枚举类，且该 Java 源文件的名字也必须和该枚举类的类名相同，这点和类是相同的；</p><p>使用 enum 定义的枚举类默认继承了 java.lang.Enum 类，并实现了 java.lang.Seriablizable 和 java.lang.Comparable 两个接口;</p><p>所有的枚举值都是 public static final 的，且非抽象的枚举类不能再派生子类；</p><p>枚举类的所有实例(枚举值)必须在枚举类的第一行显式地列出，否则这个枚举类将永远不能产生实例。列出这些实例(枚举值)时，系统会自动添加 public static final 修饰，无需程序员显式添加。</p><p><a href="https://blog.csdn.net/xu906722/article/details/80869848" target="_blank">枚举类使用详解</a></p><blockquote>
+<p><b>
+
+请解释enum 与 Enum 的区别 ：<br></b></p>
+<p><b>enum是一个关键字，使用enum定义的枚举类本质上就相对于一个类继承了Enum这个抽象类而已。所以说enum定义的枚举结构实际上就是一个多例类！</b></p>
+</blockquote><blockquote><p><b>
+
+实际上枚举就是一种高级的多例设计模式！</b></p></blockquote><blockquote><p><b>枚举类型中public不可使用，必须非私有化；枚举对象必须写在首行。</b></p></blockquote>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
